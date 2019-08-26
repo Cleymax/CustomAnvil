@@ -1,0 +1,101 @@
+import org.apache.tools.ant.filters.ReplaceTokens
+
+plugins {
+    id "com.github.johnrengelman.shadow" version "5.1.0"
+    id "java"
+}
+
+
+allprojects {
+
+    apply plugin: 'com.github.johnrengelman.shadow'
+    apply plugin: 'java'
+    apply plugin: 'maven'
+    apply plugin: 'maven-publish'
+    apply plugin: 'signing'
+
+	group 'fr.cleymax'
+	version '1.0.0'
+
+	sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    compileJava.options.encoding = 'UTF-8'
+    javadoc.options.encoding = 'UTF-8'
+
+    archivesBaseName = name
+
+	ext {
+        name = 'CustomAnvil'
+	}
+
+	repositories {
+        mavenLocal()
+        mavenCentral()
+
+        maven { url = 'https://oss.sonatype.org/content/repositories/snapshots' }
+        maven { url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
+        maven { url = 'https://jitpack.io' }
+        maven { url = 'http://maven.elmakers.com/repository/' }
+    }
+
+     dependencies {
+		shadow group: 'org.spigotmc', name: 'spigot-api', version: '1.12.2-R0.1-SNAPSHOT'
+     }
+
+	tasks.withType(JavaCompile) {
+        options.encoding = 'UTF-8'
+    }
+
+    processResources {
+        from(sourceSets.main.resources.srcDirs) {
+            filter ReplaceTokens, tokens: [version: version]
+        }
+    }
+}
+
+project(':commons'){
+	ext.name = 'CustomAnvil - Core'
+	project.description = 'Core Modules of API'
+}
+
+subprojects {
+	publishing {
+        publications {
+            mavenJava(MavenPublication) {
+            	 pom {
+                    name = project.ext.name
+                    description = project.description
+                    url  = 'https://github.com/Cleymax/CustomAnvil'
+                    version = project.version
+
+                    developers {
+                        developer {
+                            id = 'fr.cleymax'
+                            name = 'Clément P. (Cleymax)'
+                            email = 'cleymaxpro@gmail.com'
+                            url = 'https://github.com/Cleymax'
+                        }
+                    }
+
+                    licenses {
+                        license {
+                            name = 'GNU General Public License v3.0'
+                            url = 'https://opensource.org/licenses/GPL-3.0'
+                        }
+                    }
+
+                     scm {
+                        connection = 'scm:git:git://github.com/Cleymax/CustomAnvil.git'
+                        developerConnection = 'scm:git:ssh://github.com/Cleymax/CustomAnvil.git'
+                        url = 'https://github.com/Cleymax/CustomAnvil'
+                    }
+                }
+            }
+        }
+    }
+
+    signing {
+       sign configurations.archives
+    }
+}

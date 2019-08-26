@@ -1,0 +1,9 @@
+dependencies {
+    shadow 'org.spigotmc:spigot:1.13.1-R0.1-SNAPSHOT'
+}
+
+shadowJar {
+    setArchivesBaseName("CustomAnvil - 1_13_R2")
+}
+
+build.dependsOn(shadowJar)

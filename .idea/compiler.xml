@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="CustomAnvil.1.main" target="1.8" />
+      <module name="CustomAnvil.1.test" target="1.8" />
+      <module name="CustomAnvil.1_.main" target="1.8" />
+      <module name="CustomAnvil.1_.test" target="1.8" />
+      <module name="CustomAnvil.1_1.main" target="1.8" />
+      <module name="CustomAnvil.1_1.test" target="1.8" />
+      <module name="CustomAnvil.1_10_R1.main" target="1.8" />
+      <module name="CustomAnvil.1_10_R1.test" target="1.8" />
+      <module name="CustomAnvil.1_13_R1.main" target="1.8" />
+      <module name="CustomAnvil.1_13_R1.test" target="1.8" />
+      <module name="CustomAnvil.1_13_R2.main" target="1.8" />
+      <module name="CustomAnvil.1_13_R2.test" target="1.8" />
+      <module name="CustomAnvil.1_14_4.main" target="1.8" />
+      <module name="CustomAnvil.1_14_4.test" target="1.8" />
+      <module name="CustomAnvil.1_14_4_R1.main" target="1.8" />
+      <module name="CustomAnvil.1_14_4_R1.test" target="1.8" />
+      <module name="CustomAnvil.1_14_R.main" target="1.8" />
+      <module name="CustomAnvil.1_14_R.test" target="1.8" />
+      <module name="CustomAnvil.1_14_R1.main" target="1.8" />
+      <module name="CustomAnvil.1_14_R1.test" target="1.8" />
+      <module name="CustomAnvil.1_9_.main" target="1.8" />
+      <module name="CustomAnvil.1_9_.test" target="1.8" />
+      <module name="CustomAnvil.1_9_R2.main" target="1.8" />
+      <module name="CustomAnvil.1_9_R2.test" target="1.8" />
+      <module name="CustomAnvil.1_9_R21.main" target="1.8" />
+      <module name="CustomAnvil.1_9_R21.test" target="1.8" />
+      <module name="CustomAnvil.n.main" target="1.8" />
+      <module name="CustomAnvil.n.test" target="1.8" />
+      <module name="CustomAnvil.nms.1.main" target="1.8" />
+      <module name="CustomAnvil.nms.1.test" target="1.8" />
+      <module name="CustomAnvil.nms.1_12_.main" target="1.8" />
+      <module name="CustomAnvil.nms.1_12_.test" target="1.8" />
+      <module name="CustomAnvil.nms.1_9_R.main" target="1.8" />
+      <module name="CustomAnvil.nms.1_9_R.test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

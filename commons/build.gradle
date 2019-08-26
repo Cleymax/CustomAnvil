@@ -1,0 +1,21 @@
+dependencies {
+
+}
+
+shadowJar {
+    setArchivesBaseName("CustomAnvil")
+}
+
+javadoc {
+    doFirst {
+        options.links('https://hub.spigotmc.org/javadocs/spigot/','https://docs.oracle.com/javase/8/docs/api/')
+        options.setWindowTitle('CustomAnvil')
+        options.setDocTitle('CustomAnvil')
+        options.setUse(true)
+        options.setVersion(true)
+        options.setAuthor(true)
+    }
+    destinationDir = file("../docs/")
+}
+
+build.dependsOn(shadowJar)

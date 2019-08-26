@@ -1,0 +1,6 @@
+name: CustomAnvil
+version: @version@
+website: https://cleymax.fr/
+author: Cleymax
+description: Creates an anvil inventory with the Spigot API from version 1.8 to 1.14.4
+main: fr.cleymax.customanvil.CustomAnvilPlugin
